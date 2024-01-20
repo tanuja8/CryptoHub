@@ -1,10 +1,10 @@
 import React from "react";
 import { Switch, Route } from "antd";
-import { Link } from "antd";
+import { Link } from "react-router-dom";
 import { Layout, Typography, Space } from "antd";
-import { Navbar } from "./components";
+import { Navbar, Exchanges, Homepage, Cryptocurrencies, News, CryptoDetail } from "./components";
 import "./App.css";
-import { Routes } from "react-router-dom";
+
 
 const App = () => {
   return (
@@ -16,9 +16,21 @@ const App = () => {
         <Layout>
           <div className="routes">
               <Switch>
-                <Routes>
-                  
-                </Routes>
+                <Route exact path="/">
+                  <Homepage/>
+                </Route>
+                <Route exact path="/exchanges">
+                  <Exchanges/>
+                </Route>
+                <Route exact path="/cryptocurrencies">
+                  <Cryptocurrencies/>
+                </Route>
+                <Route exact path="/Crypto/:coinId">
+                  <CryptoDetail/>
+                  </Route>
+                <Route exact path="/news">
+                  <News/>
+                </Route>
               </Switch>
           </div>
         </Layout>

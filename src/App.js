@@ -1,5 +1,6 @@
 import React from "react";
-import { Switch, Route } from "antd";
+import { Switch} from "antd";
+import { Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Layout, Typography, Space } from "antd";
 import { Navbar, Exchanges, Homepage, Cryptocurrencies, News, CryptoDetail } from "./components";

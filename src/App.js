@@ -36,7 +36,17 @@ const App = () => {
           </div>
         </Layout>
       </div>
-      <div className="footer"></div>
+      <div className="footer"  level={5} style={{color:'white', textAlign:'center'}}>
+        <Typography.Title>
+          CryptoHub <br/>
+          All rights reserverd
+        </Typography.Title>
+        <Space>
+          <link to="/">Home</link>
+          <Link to="/exchanges">Exchanges</Link>
+          <Link to="/news">News</Link>
+        </Space>
+      </div>
     </div>
   );
 };

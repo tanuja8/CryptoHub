@@ -1,11 +1,17 @@
 import React from "react";
-import { Switch} from "antd";
+import { Switch } from "antd";
 import { Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Layout, Typography, Space } from "antd";
-import { Navbar, Exchanges, Homepage, Cryptocurrencies, News, CryptoDetail } from "./components";
+import {
+  Navbar,
+  Exchanges,
+  Homepage,
+  Cryptocurrencies,
+  News,
+  CryptoDetail,
+} from "./components";
 import "./App.css";
-
 
 const App = () => {
   return (
@@ -16,33 +22,42 @@ const App = () => {
       <div className="main">
         <Layout>
           <div className="routes">
-              <Switch>
-                <Route exact path="/">
-                  <Homepage/>
-                </Route>
-                <Route exact path="/exchanges">
-                  <Exchanges/>
-                </Route>
-                <Route exact path="/cryptocurrencies">
-                  <Cryptocurrencies/>
-                </Route>
-                <Route exact path="/Crypto/:coinId">
-                  <CryptoDetail/>
-                  </Route>
-                <Route exact path="/news">
-                  <News/>
-                </Route>
-              </Switch>
+            <Switch>
+              <Route exact path="/">
+                <Homepage />
+              </Route>
+              <Route exact path="/exchanges">
+                <Exchanges />
+              </Route>
+              <Route exact path="/cryptocurrencies">
+                <Cryptocurrencies />
+              </Route>
+              <Route exact path="/Crypto/:coinId">
+                <CryptoDetail />
+              </Route>
+              <Route exact path="/news">
+                <News />
+              </Route>
+            </Switch>
           </div>
         </Layout>
       </div>
-      <div className="footer"  level={5} style={{color:'white', textAlign:'center'}}>
+      <div
+        className="footer"
+        level={5}
+        style={{ color: "white", textAlign: "center" }}
+      >
         <Typography.Title>
-          CryptoHub <br/>
+          CryptoHub <br />
           All rights reserverd
         </Typography.Title>
-        <Space>
+        {/* <Space>
           <link to="/">Home</link>
+          <Link to="/exchanges">Exchanges</Link>
+          <Link to="/news">News</Link>
+        </Space> */}
+        <Space>
+          <Link to="/">Home</Link>
           <Link to="/exchanges">Exchanges</Link>
           <Link to="/news">News</Link>
         </Space>

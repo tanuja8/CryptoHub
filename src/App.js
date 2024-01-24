@@ -1,6 +1,6 @@
 import React from "react";
-import { Switch } from "antd";
-import { Route } from "react-router-dom";
+// import { Switch } from "antd";
+import { Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Layout, Typography, Space } from "antd";
 import {
@@ -26,7 +26,7 @@ const App = () => {
               <Route exact path="/">
                 <Homepage />
               </Route>
-              <Route exact path="/exchanges">
+              <Route exact path="/abc">
                 <Exchanges />
               </Route>
               <Route exact path="/cryptocurrencies">
@@ -42,20 +42,14 @@ const App = () => {
           </div>
         </Layout>
       </div>
-      <div
-        className="footer"
-        level={5}
-        style={{ color: "white", textAlign: "center" }}
-      >
-        <Typography.Title>
+      <div className="footer">
+        <Typography.Title
+          level={5}
+          style={{ color: "white", textAlign: "center" }}
+        >
           CryptoHub <br />
-          All rights reserverd
+          All rights reserved
         </Typography.Title>
-        {/* <Space>
-          <link to="/">Home</link>
-          <Link to="/exchanges">Exchanges</Link>
-          <Link to="/news">News</Link>
-        </Space> */}
         <Space>
           <Link to="/">Home</Link>
           <Link to="/exchanges">Exchanges</Link>

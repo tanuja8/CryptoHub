@@ -4,7 +4,7 @@ const Cryptocurrencies = () => {
   console.log("Cryptocurrencies component rendered");
   return (
     <div>
-      <h1>Cryptocurrencies</h1>
+      Cryptocurrencies
     </div>
   );
 };

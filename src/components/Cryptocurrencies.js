@@ -1,7 +1,15 @@
 import React from 'react';
+import { useState } from 'react';
+import millify from 'millify';
+import Link from 'react-router-dom';
+import { Card , Row , Col ,Input} from 'antd';
+import { useGetCryptosQuery } from '../services/cryptoApi';
 
 const Cryptocurrencies = () => {
-  console.log("Cryptocurrencies component rendered");
+  const{data:cryptoList,isFetching}=useGetCryptosQuery();
+  const[cryptos,setCryptos]=useState(cryptoList?.data?.coins);
+  console.log(cryptos)
+  // console.log("Cryptocurrencies component rendered");
   return (
     <div>
       Cryptocurrencies

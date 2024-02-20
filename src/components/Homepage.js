@@ -15,11 +15,11 @@ const Homepage = () => {
     return <p>Loading...</p>;
   }
 
-  // Error state
-  if (isError) {
-    return <p>Error fetching data</p>;
-  }
-  console.log(data);
+  // // Error state
+  // // if (isError) {
+  // //   return <p>Error fetching data</p>;
+  // // }
+  // // console.log(data);
   return (
     <div>
      <>
